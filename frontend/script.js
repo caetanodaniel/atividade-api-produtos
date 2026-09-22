@@ -8,15 +8,16 @@ async function carregarDados() {
 
     listaProdutos.innerHTML = '';
 
-   produtos.forEach(produto => {
-    listaProdutos.innerHTML += `
+    produtos.forEach(produto => {
+        listaProdutos.innerHTML += `
         <div class="card">
+        <img src="${produto.imagem}" alt="${produto.nome}" class="card-img">
             <h2>${produto.nome}</h2>
             <p>${produto.categoria}</p>
             <p class="preco">R$ ${produto.preco.toLocaleString('pt-BR')}</p>
         </div>
     `;
-});
+    });
 }
 
 carregarDados();
